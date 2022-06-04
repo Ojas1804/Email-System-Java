@@ -1,0 +1,106 @@
+*{
+    -fx-background-color: #e9e7e7;
+    background-color: #e9e7e7;
+    -fx-text-fill: black;
+
+}
+
+#big{
+   -fx-text-fill: #35568c;
+}
+
+
+/* Styling components */
+Button, Label, ChoiceBox, Slider
+{
+    -fx-text-fill: black;
+}
+
+
+
+/* Styling buttons */
+Button
+{
+	-fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+
+Button:hover
+{
+	-fx-background-color: #ccc5c5;
+	background-color: #ccc5c5;
+}
+
+
+/* Styling Slider */
+Slider .axis
+{
+	-fx-tick-label-fill: black;
+}
+
+Slider .track
+{
+	-fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+
+Slider .track:hover
+{
+	-fx-background-color: #ccc5c5;
+	background-color: #ccc5c5;
+}
+
+Slider .thumb
+{
+	-fx-background-color: black;
+	background-color: black;
+}
+
+
+
+/* Styling Choicebox */
+ChoiceBox > *
+{
+	-fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+	-fx-mark-color: black;
+}
+
+#choice-box-menu-item {
+	-fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+
+#choice-box-menu-item .label {
+	-fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+	-fx-text-fill: black;
+}
+
+.choice-box .left-container .radio { 
+	-fx-background-color: black; 
+	background-color: black;
+}
+
+.choice-box .left-container {
+	-fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+
+/* Style for choice box when focused or hovered on */
+#choice-box-menu-item:focused {
+	-fx-background-color: #ccc5c5;
+	background-color: #ccc5c5;
+	-fx-text-fill: black;
+}
+
+#choice-box-menu-item:focused .label {
+	-fx-background-color: #ccc5c5;
+	background-color: #ccc5c5;
+	-fx-text-fill: black;
+}
+
+#choice-box-menu-item:focused .left-container {
+	-fx-background-color: #ccc5c5;
+	background-color: #ccc5c5;
+}

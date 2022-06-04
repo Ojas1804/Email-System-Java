@@ -1,0 +1,113 @@
+*
+{
+    -fx-background-color: #282c34;
+    background-color: #282c34;
+    -fx-text-fill: white;
+}
+
+#big
+{
+    -fx-text-fill: #5f99c9;
+}
+
+
+/* Styling components */
+Button, Label, ChoiceBox, Slider
+{
+    -fx-text-fill: white;
+}
+
+
+
+/* Styling buttons */
+Button
+{
+	-fx-background-color: #1d2129;
+	background-color: #1d2129;
+}
+
+Button:hover
+{
+	-fx-background-color: #333a47;
+	background-color: #333a47;
+}
+
+
+/* Styling Slider */
+Slider .axis
+{
+	-fx-tick-label-fill: white;
+}
+
+Slider .track
+{
+	-fx-background-color: #1d2129;
+	background-color: #1d2129;
+}
+
+Slider .track:hover
+{
+	-fx-background-color: #333a47;
+	background-color: #333a47;
+}
+
+Slider .thumb
+{
+	-fx-background-color: white;
+	background-color: white;
+}
+
+
+
+/* Styling Choicebox */
+ChoiceBox > *
+{
+	-fx-background-color: #1d2129;
+	background-color: #1d2129;
+	-fx-font-family: "Bell MT";
+	font-family: 'Bell MT';
+	-fx-font-size: 14px;
+	font-size: 14px;
+	-fx-mark-color: white;
+}
+
+#choice-box-menu-item {
+	-fx-background-color: #1d2129;
+	background-color: #1d2129;
+}
+
+#choice-box-menu-item .label {
+	-fx-background-color: #1d2129;
+	background-color: #1d2129;
+	-fx-text-fill: white;
+	-fx-font-size: 14px;
+	font-size: 14px;
+}
+
+.choice-box .left-container .radio { 
+	-fx-background-color: white; 
+	background-color: white;
+}
+
+.choice-box .left-container {
+	-fx-background-color: #1d2129;
+	background-color: #1d2129;
+}
+
+/* Style for choice box when focused or hovered on */
+#choice-box-menu-item:focused {
+	-fx-background-color: #333a47;
+	background-color: #333a47;
+	-fx-text-fill: white;
+}
+
+#choice-box-menu-item:focused .label {
+	-fx-background-color: #333a47;
+	background-color: #333a47;
+	-fx-text-fill: white;
+}
+
+#choice-box-menu-item:focused .left-container {
+	-fx-background-color: #333a47;
+	background-color: #333a47;
+}

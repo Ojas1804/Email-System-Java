@@ -1,0 +1,121 @@
+*{
+    -fx-background-color: #212121;
+	background-color: #212121;
+}
+
+#big
+{
+    -fx-text-fill: #15568c;
+}
+
+
+/* Styling components */
+Button, Label, ChoiceBox, Slider
+{
+	/* -fx-font-family: "Bell MT";
+	font-family: 'Bell MT'; */
+    -fx-text-fill: white;
+}
+
+
+
+/* Styling buttons */
+Button
+{
+	-fx-background-color: black;
+	background-color: black;
+	-fx-font-size: 14px;
+	font-size: 14px;
+}
+
+Button:hover
+{
+	-fx-background-color: #333333;
+	background-color: #333333;
+}
+
+
+/* Styling Slider */
+Slider .axis
+{
+	-fx-tick-label-fill: white;
+}
+
+Slider .track
+{
+	-fx-background-color: black;
+	background-color: black;
+}
+
+Slider .track:hover
+{
+	-fx-background-color: #333333;
+	background-color: #333333;
+}
+
+Slider .thumb
+{
+	-fx-background-color: white;
+	background-color: white;
+	-fx-font-size: 12px;
+	font-size: 12px;
+}
+
+
+
+/* Styling Choicebox */
+ChoiceBox > *
+{
+	-fx-background-color: black;
+	background-color: black;
+	-fx-font-family: "Bell MT";
+	font-family: 'Bell MT';
+	-fx-font-size: 14px;
+	font-size: 14px;
+	-fx-mark-color: white;
+}
+
+#choice-box-menu-item {
+	-fx-background-color: black;
+	background-color: black;
+}
+
+#choice-box-menu-item .label {
+	-fx-background-color: black;
+	background-color: black;
+	-fx-text-fill: white;
+	-fx-font-size: 14px;
+	font-size: 14px;
+}
+
+.choice-box .left-container .radio { 
+	-fx-background-color: white; 
+	background-color: white;
+}
+
+.choice-box .left-container {
+	-fx-background-color: black;
+	background-color: black;
+}
+
+/* Style for choice box when focused or hovered on */
+#choice-box-menu-item:focused {
+	-fx-background-color: #333333;
+	background-color: #333333;
+	-fx-text-fill: white;
+	-fx-font-size: 14px;
+	font-size: 14px;
+}
+
+#choice-box-menu-item:focused .label {
+	-fx-background-color: #333333;
+	background-color: #333333;
+	-fx-text-fill: white;
+	-fx-font-size: 14px;
+	font-size: 14px;
+}
+
+#choice-box-menu-item:focused .left-container {
+	-fx-background-color: #333333;
+	background-color: #333333;
+}

@@ -1,0 +1,55 @@
+* {
+    -fx-background-color: black;
+    background-color: black;
+    -fx-font: 14px "arial";
+    font: 14px "arial";
+}
+
+
+.loginBtn {
+    -fx-background-color: white;
+    background-color: white;
+    -fx-font: 16px "arial";
+    font: 16px "arial";
+}
+
+
+.loginBtn:hover {
+    -fx-background-color: #dbd9d9;
+    background-color: #dbd9d9;
+    -fx-font: 16px "arial";
+    font: 16px "arial";
+}
+
+
+.error {
+    -fx-text-fill: red;
+    -fx-font: 10px "arial";
+    font: 10px "arial";
+}
+
+
+Label {
+    -fx-text-fill: white;
+    -fx-font: 14px "arial";
+    font: 14px "arial";
+    -fx-alignment: center;
+}
+
+
+TextField {
+    -fx-background-color: rgb(204, 202, 202);
+    background-color: rgb(204, 202, 202);
+    -fx-text-fill: white;
+    -fx-font: 12px "arial";
+    font: 12px "arial";
+}
+
+
+PasswordField {
+    -fx-background-color: rgb(204, 202, 202);
+    background-color: rgb(204, 202, 202);
+    -fx-text-fill: white;
+    -fx-font: 12px "arial";
+    font: 12px "arial";
+}
