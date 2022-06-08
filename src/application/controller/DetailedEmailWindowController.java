@@ -45,7 +45,6 @@ public class DetailedEmailWindowController extends PrimaryController implements 
 	public DetailedEmailWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlFileName)
 	{
 		super(emailManager, viewFactory, fxmlFileName);
-		System.out.println(LOCATION_OF_DOWNLOADS);
 	}
 
 
@@ -92,6 +91,7 @@ public class DetailedEmailWindowController extends PrimaryController implements 
 	{
 		private MimeBodyPart mbp;
 		private String downloadedFilePath;
+		
 		
 		public AttachmentButton(MimeBodyPart mbp) throws MessagingException
 		{

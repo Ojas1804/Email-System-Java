@@ -1,0 +1,20 @@
+@font-face {
+   font-family: 'Bell MT';
+}
+
+*{
+   -fx-font-family: "Bell MT";
+   font-family: 'Bell MT';
+   -fx-background-color: white;
+   background-color: white;
+   -fx-text-fill: black;
+   -fx-font-size: 12px;
+   font-size: 12px;
+}
+
+
+#big{
+   -fx-text-fill: #35568c;
+   -fx-font-size: 20px;
+   font-size: 20px;
+}

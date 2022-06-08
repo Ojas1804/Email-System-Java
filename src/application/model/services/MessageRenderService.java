@@ -89,11 +89,7 @@ public class MessageRenderService extends Service
 			BodyPart bodyPart = multipart.getBodyPart(i);
 			String bodyPartContentType = bodyPart.getContentType();
 			
-			if(isSimpleType(bodyPartContentType)) 
-			{
-				stringBuffer.append(bodyPart.getContent().toString());
-				System.out.println("Multipart Simple");
-			}
+			if(isSimpleType(bodyPartContentType)) stringBuffer.append(bodyPart.getContent().toString());
 			else if(isMultipartType(bodyPartContentType))
 			{
 				Multipart multipart2 = (Multipart) bodyPart.getContent();

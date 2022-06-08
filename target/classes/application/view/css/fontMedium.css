@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Bell MT';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bell MT W01'), local('BellMT'), url(http://themes.googleusercontent.com/licensed/font?kit=kmIaTfxu8bXVwPRMqRVUug) format('truetype');
+  }
+
+
+*{
+    -fx-font-size: 14px;
+    font-size: 14px;
+ }
+
+ 
+#big{
+    -fx-font: 20 'Bell MT' bold;
+    font: 20 'Bell MT' bold;
+    -fx-text-fill: #35568c;
+}
