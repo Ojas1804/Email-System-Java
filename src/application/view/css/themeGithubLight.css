@@ -1,9 +1,9 @@
-*{
+.root{
     -fx-background-color: #e9e7e7;
     background-color: #e9e7e7;
     -fx-text-fill: black;
-
 }
+
 
 #big{
    -fx-text-fill: #35568c;
@@ -17,13 +17,13 @@ Button, Label, ChoiceBox, Slider
 }
 
 
-
 /* Styling buttons */
 Button
 {
 	-fx-background-color: #dbd7d7;
 	background-color: #dbd7d7;
 }
+
 
 Button:hover
 {
@@ -38,11 +38,13 @@ Slider .axis
 	-fx-tick-label-fill: black;
 }
 
+
 Slider .track
 {
 	-fx-background-color: #dbd7d7;
 	background-color: #dbd7d7;
 }
+
 
 Slider .track:hover
 {
@@ -50,12 +52,12 @@ Slider .track:hover
 	background-color: #ccc5c5;
 }
 
+
 Slider .thumb
 {
 	-fx-background-color: black;
 	background-color: black;
 }
-
 
 
 /* Styling Choicebox */
@@ -66,10 +68,12 @@ ChoiceBox > *
 	-fx-mark-color: black;
 }
 
+
 #choice-box-menu-item {
 	-fx-background-color: #dbd7d7;
 	background-color: #dbd7d7;
 }
+
 
 #choice-box-menu-item .label {
 	-fx-background-color: #dbd7d7;
@@ -77,15 +81,18 @@ ChoiceBox > *
 	-fx-text-fill: black;
 }
 
+
 .choice-box .left-container .radio { 
 	-fx-background-color: black; 
 	background-color: black;
 }
 
+
 .choice-box .left-container {
 	-fx-background-color: #dbd7d7;
 	background-color: #dbd7d7;
 }
+
 
 /* Style for choice box when focused or hovered on */
 #choice-box-menu-item:focused {
@@ -94,13 +101,188 @@ ChoiceBox > *
 	-fx-text-fill: black;
 }
 
+
 #choice-box-menu-item:focused .label {
 	-fx-background-color: #ccc5c5;
 	background-color: #ccc5c5;
 	-fx-text-fill: black;
 }
 
+
 #choice-box-menu-item:focused .left-container {
 	-fx-background-color: #ccc5c5;
 	background-color: #ccc5c5;
+}
+
+
+/*Table view: List of E-mails are shown */ 
+.table-view {
+	-fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+ 
+
+.table-view:focused {
+	-fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+
+
+.table-view .column-header-background,
+.table-view .column-header-background .filler {
+	-fx-background-color: linear-gradient(#b1b4b4 0%, #ffffff 100%);
+	background-color: linear-gradient(#b1b4b4 0%, #ffffff 100%);
+}
+
+
+.table-view .column-header-background .label {
+	-fx-background-color: transparent;
+	background-color: transparent;
+	-fx-text-fill: black;
+}
+
+
+.table-view .column-header {
+	-fx-background-color: transparent;
+	background-color: transparent;
+}
+
+
+.table-view .table-cell {
+	-fx-text-fill: black;
+}
+
+
+.table-row-cell {
+	-fx-background-color: #d1d1d1;
+	background-color: #d1d1d1;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-padding: 0.0em; /* 0 */
+	padding: 0.0em;
+	-fx-table-cell-border-color: #c9c8c8;
+	-fx-border-color: #c9c8c8;
+	border-color: #c9c8c8;
+}
+
+
+.table-row-cell:odd {
+	-fx-background-color: #cac8c8, #dddbdb;  /*  exp */
+	background-color: #cac8c8, #dddbdb;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-padding: 0.0em; /* 0 */
+	padding: 0.0em;
+}
+
+ 
+.table-row-cell:selected {
+	-fx-background-color: #b8b8b8;
+	background-color: b8b8b8;
+	-fx-background-insets: 0;
+	-fx-background-radius: 1;
+}
+
+
+ /*Tree view:*/
+.tree-cell {
+    -fx-background-color: #d3d3d3;
+	background-color: #d3d3d3;
+    -fx-text-fill: black;
+}
+
+
+.tree-cell > .tree-disclosure-node > .arrow {
+	-fx-background-color: black;
+	background-color: black;
+}
+ 
+
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button {
+	-fx-padding: 0.15em;
+	padding: 0.15em;
+}
+
+
+.scroll-bar .thumb {
+	-fx-background-color: #c7c6c6;
+	background-color: #c7c6c6;
+}
+
+
+.scroll-bar {
+	-fx-background-color: #c7c6c6;
+	background-color: #c7c6c6;
+}
+
+
+/*menus and menu items:*/
+.menu-bar {
+    -fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+
+
+.menu-bar > .container > .menu-button {
+    -fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+
+
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: black;
+}
+
+
+.menu-bar > .container > .menu-button > .label:disabled {
+    -fx-opacity: 1.0;
+	opacity: 1.0;
+}
+
+
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: #ccc5c5;
+	background-color: #ccc5c5;
+}
+
+
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing > .label {
+    -fx-text-fill: black;
+}
+
+
+.menu-item {
+    -fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
+}
+
+
+.menu-item .label {
+    -fx-text-fill: black;
+}
+
+
+.menu-item .label:disabled {
+    -fx-opacity: 1.0;
+	opacity: 1.0;
+}
+
+
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: #ccc5c5;
+	background-color: #ccc5c5;
+}
+
+
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-text-fill: black;
+}
+
+
+.context-menu {
+    -fx-background-color: #dbd7d7;
+	background-color: #dbd7d7;
 }

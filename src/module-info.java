@@ -7,7 +7,9 @@ module email_system
 	requires javafx.base;
 	requires activation;
 	requires java.mail;
+	requires java.desktop;
 	
 	opens application to javafx.graphics, javafx.fxml;
-	opens application.view.controller;
+	opens application.controller;
+	opens application.model;
 }

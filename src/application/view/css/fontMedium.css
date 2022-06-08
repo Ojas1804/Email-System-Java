@@ -7,13 +7,13 @@
 
 
 *{
-    -fx-font-size: 12px;
-    font-size: 12px;
+    -fx-font-size: 14px;
+    font-size: 14px;
  }
 
  
 #big{
-    -fx-font: 20 'Bell MT';
-    font: 20 'Bell MT';
+    -fx-font: 20 'Bell MT' bold;
+    font: 20 'Bell MT' bold;
     -fx-text-fill: #35568c;
 }

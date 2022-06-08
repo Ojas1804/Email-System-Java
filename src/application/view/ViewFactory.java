@@ -3,10 +3,12 @@ package application.view;
 import java.util.LinkedList;
 
 import application.EmailManager;
-import application.view.controller.LoginWindowController;
-import application.view.controller.MainWindowController;
-import application.view.controller.OptionsWindowController;
-import application.view.controller.PrimaryController;
+import application.controller.ComposeMailController;
+import application.controller.DetailedEmailWindowController;
+import application.controller.LoginWindowController;
+import application.controller.MainWindowController;
+import application.controller.OptionsWindowController;
+import application.controller.PrimaryController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,10 +18,12 @@ public class ViewFactory
 {
 	private EmailManager emailManager;
 	private LinkedList<Stage> activeStageList;
+	private boolean mainViewInitialized = false;
 	
 	private Themes theme = Themes.GITHUBLIGHT;
 	private FontSize fontSize = FontSize.MEDIUM;
 
+	
 	
 	public ViewFactory(EmailManager emailManager)
 	{
@@ -27,13 +31,22 @@ public class ViewFactory
 		this.setEmailManager(emailManager);
 		this.activeStageList = new LinkedList<>();
 	}
+	
+	
+	
+	public boolean isMainViewInitialized()
+	{
+		return mainViewInitialized;
+	}
 
 
+	
 	public EmailManager getEmailManager()
 	{
 		return emailManager;
 	}
 
+	
 
 	public void setEmailManager(EmailManager emailManager)
 	{
@@ -65,6 +78,7 @@ public class ViewFactory
 		activeStageList.add(stage);
 	}
 	
+	
 	// show login window
 	public void showLoginWindow()
 	{
@@ -76,8 +90,10 @@ public class ViewFactory
 	// show main window
 	public void showMainWindow()
 	{
+		updateScene();
 		PrimaryController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
 		initializeStage(controller);
+		this.mainViewInitialized = true;
 	}
 	
 	
@@ -85,6 +101,22 @@ public class ViewFactory
 	public void showOptionsWindow()
 	{
 		PrimaryController controller = new OptionsWindowController(emailManager, this, "Options.fxml");
+		initializeStage(controller);
+	}
+	
+	
+	// show compose mail window
+	public void showComposeMailWindow()
+	{
+		PrimaryController controller = new ComposeMailController(emailManager, this, "ComposeMail.fxml");
+		initializeStage(controller);
+	}
+	
+	
+	// show detailed email window
+	public void showDetailedEmailWindow()
+	{
+		PrimaryController controller = new DetailedEmailWindowController(emailManager, this, "DetailedEmailWindow.fxml");
 		initializeStage(controller);
 	}
 	

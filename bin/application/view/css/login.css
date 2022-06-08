@@ -1,38 +1,52 @@
-* {
+.root {
     -fx-background-color: black;
     background-color: black;
-    -fx-font: 14px "arial";
-    font: 14px "arial";
+    -fx-font: 14px "Serif";
+    font: 14px "Serif";
 }
 
 
-.loginBtn {
-    -fx-background-color: white;
-    background-color: white;
-    -fx-font: 16px "arial";
-    font: 16px "arial";
+AnchorPane {
+    -fx-background-color: black;
+    background-color: black;
+    -fx-font: 14px "Serif";
+    font: 14px "Serif";
 }
 
 
-.loginBtn:hover {
-    -fx-background-color: #dbd9d9;
-    background-color: #dbd9d9;
-    -fx-font: 16px "arial";
-    font: 16px "arial";
+.button {
+    -fx-background-color: #0376ce;
+    background-color: #0376ce;
+    -fx-text-fill: white;
+    -fx-font: bold 22px "Serif";
+    font: bold 22px "Serif";
+    -fx-border-radius: 10;
+    border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+
+.button:hover {
+    -fx-background-color: #005da6;
+    background-color: #005da6;
 }
 
 
 .error {
+    -fx-background-color: black;
+    background-color: black;
     -fx-text-fill: red;
-    -fx-font: 10px "arial";
-    font: 10px "arial";
+    -fx-font: 11px "Serif";
+    font: 11px Serif;
 }
 
 
 Label {
+    -fx-background-color: black;
+    background-color: black;
     -fx-text-fill: white;
-    -fx-font: 14px "arial";
-    font: 14px "arial";
+    -fx-font: 14px "Serif";
+    font: 14px "Serif";
     -fx-alignment: center;
 }
 
@@ -40,16 +54,16 @@ Label {
 TextField {
     -fx-background-color: rgb(204, 202, 202);
     background-color: rgb(204, 202, 202);
-    -fx-text-fill: white;
-    -fx-font: 12px "arial";
-    font: 12px "arial";
+    -fx-text-fill: black;
+    -fx-font: 12px "Serif";
+    font: 12px "Serif";
 }
 
 
 PasswordField {
     -fx-background-color: rgb(204, 202, 202);
     background-color: rgb(204, 202, 202);
-    -fx-text-fill: white;
-    -fx-font: 12px "arial";
-    font: 12px "arial";
+    -fx-text-fill: black;
+    -fx-font: 12px "Serif";
+    font: 12px "Serif";
 }

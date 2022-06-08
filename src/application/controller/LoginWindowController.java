@@ -1,4 +1,4 @@
-package application.view.controller;
+package application.controller;
 
 import application.EmailManager;
 import application.model.EmailAccount;
@@ -6,6 +6,7 @@ import application.model.LoginResult;
 import application.model.services.LoginService;
 import application.view.ViewFactory;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -32,11 +33,15 @@ public class LoginWindowController extends PrimaryController
 
     @FXML
     private PasswordField password;
+    
+    @FXML
+    private Button loginButton;
 
     
     @FXML
     void loginClicked()
     {
+    	loginButton.setDisable(true);
     	if(fieldsAreValid())
     	{
     		EmailAccount emailAccount = new EmailAccount(emailID.getText(), password.getText());
@@ -46,34 +51,50 @@ public class LoginWindowController extends PrimaryController
     		loginService.setOnSucceeded(event -> {
     			LoginResult result = loginService.getValue();
         		
-        		switch(result) {
+        		switch(result)
+        		{
         			case SUCCESS:
-        				System.out.println("Login Successfull");
-        				showMainWindow();
+        				if(!viewFactory.isMainViewInitialized())
+        				{
+        					viewFactory.showMainWindow();
+        				}
+        				closeLoginWindow();
+        				loginButton.setDisable(false);
         				return;
+        				
         			case FAILED_BY_CREDENTIALS:
         				errorLabel.setText("Wrong password or email-id");
+        				loginButton.setDisable(false);
         				return;
+        				
         			case FAILED_BY_NETWORK:
         				errorLabel.setText("Network error!");
+        				loginButton.setDisable(false);
         				return;
+        				
         			case FAILED_BY_UNEXPECTED_ERROR:
         				errorLabel.setText("Unexpected error. Try again Later!");
+        				loginButton.setDisable(false);
         				return;
+        				
     				default:
     					System.out.println("Login Unsuccessfull");
+    					loginButton.setDisable(false);
     					return;
         		}
     		});
     	}
-//    	System.out.println("Login Clicked!!");
+    	
+    	if(!fieldsAreValid()) 
+		{
+			loginButton.setDisable(false);
+		}
     }
     
     
     // call this method in case login happens successfully
-    private void showMainWindow()
+    private void closeLoginWindow()
     {
-    	viewFactory.showMainWindow();
     	try
     	{
     		viewFactory.closeStage((Stage) errorLabel.getScene().getWindow());   // closing login window

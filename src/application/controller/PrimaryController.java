@@ -1,4 +1,4 @@
-package application.view.controller;
+package application.controller;
 
 import application.EmailManager;
 import application.view.ViewFactory;

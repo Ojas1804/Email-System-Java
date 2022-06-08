@@ -11,7 +11,7 @@
 }
 
 #big{
-   -fx-font: 24 'Bell MT';
-   font: 24 'Bell MT';
+   -fx-font: 24 'Bell MT' bold;
+   font: 24 'Bell MT' bold;
    -fx-text-fill: #35568c;
 }

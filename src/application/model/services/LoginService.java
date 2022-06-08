@@ -42,12 +42,13 @@ public class LoginService extends Service<LoginResult>
 		
 		try
 		{
-			Thread.sleep(5000);
 			Session session = Session.getInstance(emailAccount.getProperties(), authenticator);
+			emailAccount.setSession(session);
 			Store store = session.getStore("imaps");
 			store.connect(emailAccount.getProperties().getProperty("incomingHost"), emailAccount.getEmailId(),
 					emailAccount.getPassword());
 			emailAccount.setMailStore(store);   // use to get mails
+			emailManager.addEmailAccount(emailAccount);
 		}
 		catch(NoSuchProviderException e)
 		{
