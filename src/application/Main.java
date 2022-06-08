@@ -22,8 +22,6 @@ public class Main extends Application
 	{	
 		ViewFactory viewFactory = new ViewFactory(emailManager);
 		viewFactory.updateScene();
-//		viewFactory.showLoginWindow();
-//		viewFactory.updateScene();
 		List<ValidAccount> validAccounts = persistenceAccess.loadFromPersistence();
 		
 		if(validAccounts.size() > 0)

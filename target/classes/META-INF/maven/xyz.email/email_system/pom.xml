@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>xyz.email</groupId>
+  <artifactId>email_system</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Email System</name>
+  <description>
+  	Email system for multiple email IDs of different domains
+  </description>
+  
+  <dependencies>
+	<!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
+	<dependency>
+	    <groupId>com.sun.mail</groupId>
+	    <artifactId>javax.mail</artifactId>
+	    <version>1.6.2</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/javax.activation/javax.activation-api -->
+	<dependency>
+	    <groupId>javax.activation</groupId>
+	    <artifactId>javax.activation-api</artifactId>
+	    <version>1.2.0</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>org.openjfx</groupId>
+	    <artifactId>javafx-controls</artifactId>
+	    <version>15.0.1</version>
+	 </dependency>
+	 
+	<!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
+	<dependency>
+	    <groupId>org.openjfx</groupId>
+	    <artifactId>javafx</artifactId>
+	    <version>11</version>
+	    <type>pom</type>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+	<dependency>
+	    <groupId>org.openjfx</groupId>
+	    <artifactId>javafx-fxml</artifactId>
+	    <version>19-ea+7</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+	<dependency>
+	    <groupId>org.openjfx</groupId>
+	    <artifactId>javafx-web</artifactId>
+	    <version>19-ea+7</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-graphics -->
+	<dependency>
+	    <groupId>org.openjfx</groupId>
+	    <artifactId>javafx-graphics</artifactId>
+	    <version>19-ea+7</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
+	<dependency>
+	    <groupId>org.openjfx</groupId>
+	    <artifactId>javafx-media</artifactId>
+	    <version>19-ea+7</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-swing -->
+	<dependency>
+	    <groupId>org.openjfx</groupId>
+	    <artifactId>javafx-swing</artifactId>
+	    <version>19-ea+7</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+	<dependency>
+	    <groupId>org.openjfx</groupId>
+	    <artifactId>javafx-base</artifactId>
+	    <version>19-ea+7</version>
+	</dependency>
+
+  </dependencies>
+  
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>17</release>
+        </configuration>
+      </plugin>
+    </plugins>  
+  </build>
+  
+</project>

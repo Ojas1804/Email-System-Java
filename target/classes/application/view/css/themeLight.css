@@ -1,0 +1,289 @@
+.root {
+    -fx-background-color: white;
+	background-color: white;
+    -fx-text-fill: black;
+
+}
+
+
+#big{
+   -fx-text-fill: #35568c;
+}
+
+
+/* Styling components */
+Button, Label, ChoiceBox, Slider
+{
+    -fx-text-fill: black;
+}
+
+
+/* Styling buttons */
+Button
+{
+	-fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+
+
+Button:hover
+{
+	-fx-background-color: #dfdbdb;
+	background-color: #dfdbdb;
+}
+
+
+/* Styling Slider */
+Slider .axis
+{
+	-fx-tick-label-fill: black;
+}
+
+
+Slider .track
+{
+	-fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+
+
+Slider .track:hover
+{
+	-fx-background-color: #dfdbdb;
+	background-color: #dfdbdb;
+}
+
+
+Slider .thumb
+{
+	-fx-background-color: black;
+	background-color: black;
+}
+
+
+/* Styling Choicebox */
+ChoiceBox > *
+{
+	-fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+	-fx-mark-color: black;
+}
+
+
+#choice-box-menu-item {
+	-fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+
+
+#choice-box-menu-item .label {
+	-fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+	-fx-text-fill: black;
+}
+
+
+.choice-box .left-container .radio { 
+	-fx-background-color: black; 
+	background-color: black;
+}
+
+
+.choice-box .left-container {
+	-fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+
+
+/* Style for choice box when focused or hovered on */
+#choice-box-menu-item:focused {
+	-fx-background-color: #dfdbdb;
+	background-color: #dfdbdb;
+	-fx-text-fill: black;
+}
+
+
+#choice-box-menu-item:focused .label {
+	-fx-background-color: #dfdbdb;
+	background-color: #dfdbdb;
+	-fx-text-fill: black;
+}
+
+
+#choice-box-menu-item:focused .left-container {
+	-fx-background-color: #dfdbdb;
+	background-color: #dfdbdb;
+}
+
+
+/*Table view: List of E-mails are shown */ 
+.table-view {
+	-fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+ 
+
+.table-view:focused {
+	-fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+
+
+.table-view .column-header-background,
+.table-view .column-header-background .filler {
+	-fx-background-color: linear-gradient(#b1b4b4 0%, #ffffff 100%);
+	background-color: linear-gradient(#b1b4b4 0%, #ffffff 100%);
+}
+
+
+.table-view .column-header-background .label {
+	-fx-background-color: transparent;
+	background-color: transparent;
+	-fx-text-fill: black;
+}
+
+
+.table-view .column-header {
+	-fx-background-color: transparent;
+	background-color: transparent;
+}
+
+
+.table-view .table-cell {
+	-fx-text-fill: black;
+}
+
+
+.table-row-cell {
+	-fx-background-color: #dfdbdb;
+	background-color: #dfdbdb;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-padding: 0.0em; /* 0 */
+	padding: 0.0em;
+	-fx-table-cell-border-color: #d5d5f8;
+	-fx-border-color: white;
+	border-color: white;
+}
+
+
+.table-row-cell:odd {
+	-fx-background-color: #bebdbd, #f1f1f1;  /*  exp */
+	background-color: #bebdbd, #f1f1f1;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-padding: 0.0em; /* 0 */
+	padding: 0.0em;
+}
+
+ 
+.table-row-cell:selected {
+	-fx-background-color: rgb(207, 205, 205);
+	background-color: rgb(207, 205, 205);
+	-fx-background-insets: 0;
+	-fx-background-radius: 1;
+}
+
+
+ /*Tree view:*/
+.tree-cell {
+    -fx-background-color: #e4dcdc;
+	background-color: e4dcdc;
+    -fx-text-fill: black;
+}
+
+
+.tree-cell > .tree-disclosure-node > .arrow {
+	-fx-background-color: black;
+	background-color: black;
+}
+ 
+
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button {
+	-fx-padding: 0.15em;
+	padding: 0.15em;
+}
+
+
+.scroll-bar .thumb {
+	-fx-background-color: #424242;
+	background-color: #424242;
+}
+
+
+.scroll-bar {
+	-fx-background-color: #1e1e1f;
+	background-color: #1e1e1f;
+}
+
+
+/*menus and menu items:*/
+.menu-bar {
+    -fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+
+
+.menu-bar > .container > .menu-button {
+    -fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+
+
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: black;
+}
+
+
+.menu-bar > .container > .menu-button > .label:disabled {
+    -fx-opacity: 1.0;
+	opacity: 1.0;
+}
+
+
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: #dfdbdb;
+	background-color: #dfdbdb;
+}
+
+
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing > .label {
+    -fx-text-fill: black;
+}
+
+
+.menu-item {
+    -fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}
+
+
+.menu-item .label {
+    -fx-text-fill: black;
+}
+
+
+.menu-item .label:disabled {
+    -fx-opacity: 1.0;
+	opacity: 1.0;
+}
+
+
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: #dfdbdb;
+	background-color: #dfdbdb;
+}
+
+
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-text-fill: black;
+}
+
+
+.context-menu {
+    -fx-background-color: #eeebeb;
+	background-color: #eeebeb;
+}

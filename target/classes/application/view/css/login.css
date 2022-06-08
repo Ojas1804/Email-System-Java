@@ -1,0 +1,69 @@
+.root {
+    -fx-background-color: black;
+    background-color: black;
+    -fx-font: 14px "Serif";
+    font: 14px "Serif";
+}
+
+
+AnchorPane {
+    -fx-background-color: black;
+    background-color: black;
+    -fx-font: 14px "Serif";
+    font: 14px "Serif";
+}
+
+
+.button {
+    -fx-background-color: #0376ce;
+    background-color: #0376ce;
+    -fx-text-fill: white;
+    -fx-font: bold 22px "Serif";
+    font: bold 22px "Serif";
+    -fx-border-radius: 10;
+    border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+
+.button:hover {
+    -fx-background-color: #005da6;
+    background-color: #005da6;
+}
+
+
+.error {
+    -fx-background-color: black;
+    background-color: black;
+    -fx-text-fill: red;
+    -fx-font: 11px "Serif";
+    font: 11px Serif;
+}
+
+
+Label {
+    -fx-background-color: black;
+    background-color: black;
+    -fx-text-fill: white;
+    -fx-font: 14px "Serif";
+    font: 14px "Serif";
+    -fx-alignment: center;
+}
+
+
+TextField {
+    -fx-background-color: rgb(204, 202, 202);
+    background-color: rgb(204, 202, 202);
+    -fx-text-fill: black;
+    -fx-font: 12px "Serif";
+    font: 12px "Serif";
+}
+
+
+PasswordField {
+    -fx-background-color: rgb(204, 202, 202);
+    background-color: rgb(204, 202, 202);
+    -fx-text-fill: black;
+    -fx-font: 12px "Serif";
+    font: 12px "Serif";
+}
