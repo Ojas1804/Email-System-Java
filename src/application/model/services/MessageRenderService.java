@@ -77,7 +77,8 @@ public class MessageRenderService extends Service
 		else if(isMultipartType(contentType))
 		{
 			Multipart multipart = (Multipart) message.getContent();
-			if(!email.isAttachmentLoaded()) loadMultipart(multipart, stringBuffer);
+			email.setNumberOfAttachmentLoaded(countAttachments(multipart));
+			loadMultipart(multipart, stringBuffer);
 		}
 	}
 	
@@ -95,6 +96,7 @@ public class MessageRenderService extends Service
 				Multipart multipart2 = (Multipart) bodyPart.getContent();
 				loadMultipart(multipart2, stringBuffer);
 			}
+			
 			// handling attachments
 			else if(!isTextPlain(bodyPartContentType))
 			{
@@ -123,5 +125,20 @@ public class MessageRenderService extends Service
 	{
 		if(contentType.contains("multipart") || contentType.contains("multipart/mixed")) return true;
 		return false;
+	}
+	
+	
+	private int countAttachments(Multipart multipart) throws MessagingException
+	{
+		int count = 0;
+		for(int i = multipart.getCount() - 1; i >= 0; i--)
+		{
+			BodyPart bodyPart = multipart.getBodyPart(i);
+			String bodyPartContentType = bodyPart.getContentType();
+			if(isSimpleType(bodyPartContentType)) continue;
+			else if(isMultipartType(bodyPartContentType)) continue;
+			else if(!isTextPlain(bodyPartContentType)) count++;
+		}
+		return count;
 	}
 }

@@ -21,6 +21,7 @@ public class EmailMessage
 	private SimpleObjectProperty<Date> date;
 	private Message message;
 	private List<MimeBodyPart> attachmentList = new ArrayList<MimeBodyPart>();
+	private int numberOfAttachmentLoaded;
 
 
 	private boolean hasAttachment = false;
@@ -101,8 +102,8 @@ public class EmailMessage
 	public void addAttachment(MimeBodyPart mimeBodyPart)
 	{
 		hasAttachment = true;
-		attachmentLoaded = true;
-		attachmentList.add(mimeBodyPart);
+//		attachmentLoaded = true;
+		if(attachmentList.size() < this.numberOfAttachmentLoaded) attachmentList.add(mimeBodyPart);
 	}
 
 
@@ -122,5 +123,11 @@ public class EmailMessage
 	public List<MimeBodyPart> getAttachmentList()
 	{
 		return attachmentList;
+	}
+	
+	
+	public void setNumberOfAttachmentLoaded(int num)
+	{
+		this.numberOfAttachmentLoaded = num;
 	}
 }

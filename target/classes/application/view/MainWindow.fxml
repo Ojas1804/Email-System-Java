@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.web.WebView?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -34,7 +33,7 @@
         </menus>
       </MenuBar>
       <TreeView fx:id="emailsTreeView" layoutY="26.0" prefHeight="591.0" prefWidth="237.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="26.0" />
-      <TableView fx:id="emailsTableView" layoutX="236.0" layoutY="27.0" prefHeight="235.0" prefWidth="1022.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+      <TableView fx:id="emailsTableView" layoutX="236.0" layoutY="27.0" prefHeight="591.0" prefWidth="1022.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
         <columns>
           <TableColumn fx:id="senderColumn" prefWidth="178.0" text="Sender" />
           <TableColumn fx:id="subjectColumn" prefWidth="475.0" text="Subject" />
@@ -43,6 +42,5 @@
             <TableColumn fx:id="recipientColumn" minWidth="0.0" prefWidth="168.0" text="Recipient" />
         </columns>
       </TableView>
-      <WebView fx:id="emailWebView" layoutX="236.0" layoutY="263.0" prefHeight="355.0" prefWidth="1022.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="263.0" />
    </children>
 </AnchorPane>

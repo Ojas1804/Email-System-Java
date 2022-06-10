@@ -159,6 +159,7 @@ public class MainWindowController extends PrimaryController implements Initializ
 
 	private void setUpMessageRenderService()
 	{
+		emailWebView.getEngine().loadContent("");
 		messageRenderService = new MessageRenderService(emailWebView.getEngine());
 	}
 
@@ -169,11 +170,19 @@ public class MainWindowController extends PrimaryController implements Initializ
 			EmailMessage email = emailsTableView.getSelectionModel().getSelectedItem();
 			if(email != null)
 			{
+				emailWebView.getEngine().loadContent("");
 				emailManager.setSelectedEmail(email);
 				if(!email.isRead()) emailManager.setRead(); // update seen to true if unseen
-//				viewFactory.showDetailedEmailWindow();
 				messageRenderService.setEmail(email);
 				messageRenderService.restart();
+				try
+				{
+					Thread.sleep(1000); // so as to stop printing same message multiple times.
+				} 
+				catch (InterruptedException e1)
+				{
+					e1.printStackTrace();
+				}
 			}
 		});
 	}
@@ -195,4 +204,3 @@ public class MainWindowController extends PrimaryController implements Initializ
 		});
 	}
 }
-

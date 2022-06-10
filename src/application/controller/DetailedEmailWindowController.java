@@ -18,15 +18,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.web.WebEngine;
+import javafx.scene.layout.GridPane;
 import javafx.scene.web.WebView;
 
 public class DetailedEmailWindowController extends PrimaryController implements Initializable
 {
 
 	@FXML
-    private HBox hBoxDownloads;
+    private GridPane hBoxDownloads;
 
     @FXML
     private Label senderLabel;
@@ -42,16 +41,9 @@ public class DetailedEmailWindowController extends PrimaryController implements 
     
     private String LOCATION_OF_DOWNLOADS = System.getProperty("user.home") + File.separator +"Downloads" + File.separator;
     
-    
 	public DetailedEmailWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlFileName)
 	{
 		super(emailManager, viewFactory, fxmlFileName);
-	}
-	
-	
-	public WebEngine getWebEngine()
-	{
-		return this.webView.getEngine();
 	}
 
 
@@ -80,10 +72,18 @@ public class DetailedEmailWindowController extends PrimaryController implements 
 	{
 		if(email.isHasAttachment())
 		{
+			int i = 0;
+			int j = 0;
 			for(MimeBodyPart mbp : email.getAttachmentList())
 			{
 				AttachmentButton button = new AttachmentButton(mbp);
-				hBoxDownloads.getChildren().add(button);
+				hBoxDownloads.add(button, i, j);
+				if(i < 5) i++;
+				else
+				{
+					i = 0;
+					j++;
+				}
 			}
 		}
 		else
@@ -98,7 +98,6 @@ public class DetailedEmailWindowController extends PrimaryController implements 
 	{
 		private MimeBodyPart mbp;
 		private String downloadedFilePath;
-		
 		
 		public AttachmentButton(MimeBodyPart mbp) throws MessagingException
 		{

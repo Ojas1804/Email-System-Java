@@ -73,7 +73,6 @@ public class ViewFactory
 		
 		Scene scene = new Scene(parent);
 		Stage stage = new Stage();
-//		updateScene();
 		stage.setScene(scene);
 		stage.show();
 		activeStageList.add(stage);
@@ -124,6 +123,14 @@ public class ViewFactory
 	}
 	
 	
+	public PrimaryController showDetailedEmailWindow(PrimaryController controller)
+	{
+//		PrimaryController controller = new DetailedEmailWindowController(emailManager, this, "DetailedEmailWindow.fxml");
+		initializeStage(controller);
+		return controller;
+	}
+	
+	
 	// closing window
 	public void closeStage(Stage stage)
 	{
@@ -163,7 +170,6 @@ public class ViewFactory
 	// ------------------------------UPDATE SCENE------------------------------------------------ //
 	public void updateScene()   // update scene style when updated in options window
 	{
-		System.out.println("Update scene called..");
 		for(Stage stage : activeStageList)
 		{
 			Scene scene = stage.getScene();
