@@ -1,7 +1,7 @@
 .root
 {
-    -fx-background-color: #282c34;
-    background-color: #282c34;
+    -fx-background-color: #1b1b1d;
+    background-color: #1b1b1d;
     -fx-text-fill: white;
 }
 
@@ -22,14 +22,14 @@ Button, Label, ChoiceBox, Slider
 /* Styling buttons */
 Button
 {
-	-fx-background-color: #1d2129;
-	background-color: #1d2129;
+	-fx-background-color: #24292e;
+	background-color: #24292e;
 }
 
 Button:hover
 {
-	-fx-background-color: #333a47;
-	background-color: #333a47;
+	-fx-background-color: #2d313a;
+	background-color: #2d313a;
 }
 
 
@@ -41,8 +41,8 @@ Slider .axis
 
 Slider .track
 {
-	-fx-background-color: #1d2129;
-	background-color: #1d2129;
+	-fx-background-color: #24292e;
+	background-color: #24292e;
 }
 
 Slider .track:hover
@@ -62,8 +62,8 @@ Slider .thumb
 /* Styling Choicebox */
 ChoiceBox > *
 {
-	-fx-background-color: #1d2129;
-	background-color: #1d2129;
+	-fx-background-color: #24292e;
+	background-color: #24292e;
 	-fx-font-family: "Bell MT";
 	font-family: 'Bell MT';
 	-fx-font-size: 14px;
@@ -72,13 +72,13 @@ ChoiceBox > *
 }
 
 #choice-box-menu-item {
-	-fx-background-color: #1d2129;
-	background-color: #1d2129;
+	-fx-background-color: #24292e;
+	background-color: #24292e;
 }
 
 #choice-box-menu-item .label {
-	-fx-background-color: #1d2129;
-	background-color: #1d2129;
+	-fx-background-color: #24292e;
+	background-color: #24292e;
 	-fx-text-fill: white;
 	-fx-font-size: 14px;
 	font-size: 14px;
@@ -90,8 +90,8 @@ ChoiceBox > *
 }
 
 .choice-box .left-container {
-	-fx-background-color: #1d2129;
-	background-color: #1d2129;
+	-fx-background-color: #24292e;
+	background-color: #24292e;
 }
 
 /* Style for choice box when focused or hovered on */
@@ -115,21 +115,23 @@ ChoiceBox > *
 
 /*Table view: List of E-mails are shown */ 
 .table-view {
-	-fx-background-color: #282c34;
-	background-color: #282c34;
+	-fx-background-color: #1b1b1d;
+	background-color: #1b1b1d;
+	-fx-padding: 10px;
+	padding: 10px;
 }
  
 
  .table-view:focused {
-	-fx-background-color: #282c34;
-	background-color: #282c34;
+	-fx-background-color: #1b1b1d;
+	background-color: #1b1b1d;
  }
 
 
  .table-view .column-header-background,
  .table-view .column-header-background .filler {
-	-fx-background-color: linear-gradient(#79797a 0%, #746d88 100%);
-	background-color: linear-gradient(#79797a 0%, #746d88 100%);
+	-fx-background-color: linear-gradient(#1b1b1d 0%, #1b1b22 100%);
+	background-color: linear-gradient(#1b1b1d 0%, #1b1b22 100%);
  }
 
 
@@ -148,12 +150,14 @@ ChoiceBox > *
 
  .table-view .table-cell {
 	-fx-text-fill: white;
+	-fx-padding: 7px;
+	padding: 7px;
  }
 
 
  .table-row-cell {
-	-fx-background-color: #333a47;
-	background-color: #333a47;
+	-fx-background-color: #12131a;
+	background-color: #12131a;
 	-fx-background-insets: 0, 0 0 1 0;
 	-fx-padding: 0.0em; /* 0 */
 	padding: 0.0em;
@@ -164,8 +168,8 @@ ChoiceBox > *
 
 
  .table-row-cell:odd {
-	-fx-background-color: #161720, #373a50;  /*  exp */
-	background-color: #161720, #373a50;
+	-fx-background-color: #161720, #1d1e27;  /*  exp */
+	background-color: #161720, #1d1e27;
 	-fx-background-insets: 0, 0 0 1 0;
 	-fx-padding: 0.0em; /* 0 */
 	padding: 0.0em;
@@ -173,8 +177,8 @@ ChoiceBox > *
 
  
  .table-row-cell:selected {
-	-fx-background-color: rgb(25, 24, 41);
-	background-color: rgb(25, 24, 41);
+	-fx-background-color: rgb(36, 35, 37);
+	background-color: rgb(36, 35, 37);
 	-fx-background-insets: 0;
 	-fx-background-radius: 1;
  }
@@ -182,8 +186,8 @@ ChoiceBox > *
 
  /*Tree view:*/
 .tree-cell {
-    -fx-background-color: rgb(23, 20, 37);
-	background-color: rgb(23, 20, 37);
+    -fx-background-color: rgb(14, 13, 15);
+	background-color: rgb(14, 13, 15);
     -fx-text-fill: white;
  }
 
@@ -215,14 +219,14 @@ ChoiceBox > *
 
 /*menus and menu items:*/
 .menu-bar {
-    -fx-background-color: #282c34;
-	background-color: #282c34;
+    -fx-background-color: #1b1b1d;
+	background-color: #1b1b1d;
 }
 
 
 .menu-bar > .container > .menu-button {
-    -fx-background-color: #282c34;
-	background-color: #282c34;
+    -fx-background-color: #1b1b1d;
+	background-color: #1b1b1d;
 }
 
 
@@ -253,8 +257,8 @@ ChoiceBox > *
 
 
 .menu-item {
-    -fx-background-color: #282c34;
-	background-color: #282c34;
+    -fx-background-color: #1b1b1d;
+	background-color: #1b1b1d;
 }
 
 
@@ -281,6 +285,6 @@ ChoiceBox > *
 
 
 .context-menu {
-    -fx-background-color: #282c34;
-	background-color: #282c34;
+    -fx-background-color: #1b1b1d;
+	background-color: #1b1b1d;
 }

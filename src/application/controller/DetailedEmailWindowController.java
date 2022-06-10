@@ -19,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
+import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 public class DetailedEmailWindowController extends PrimaryController implements Initializable
@@ -39,12 +40,18 @@ public class DetailedEmailWindowController extends PrimaryController implements 
     @FXML
     private WebView webView;
     
-    private String LOCATION_OF_DOWNLOADS = System.getProperty("user.home") + "\\Downloads\\";
+    private String LOCATION_OF_DOWNLOADS = System.getProperty("user.home") + File.separator +"Downloads" + File.separator;
     
     
 	public DetailedEmailWindowController(EmailManager emailManager, ViewFactory viewFactory, String fxmlFileName)
 	{
 		super(emailManager, viewFactory, fxmlFileName);
+	}
+	
+	
+	public WebEngine getWebEngine()
+	{
+		return this.webView.getEngine();
 	}
 
 
@@ -69,7 +76,7 @@ public class DetailedEmailWindowController extends PrimaryController implements 
 	}
 
 
-	private void loadAttachments(EmailMessage email) throws MessagingException
+	public void loadAttachments(EmailMessage email) throws MessagingException
 	{
 		if(email.isHasAttachment())
 		{
@@ -156,13 +163,14 @@ public class DetailedEmailWindowController extends PrimaryController implements 
 		
 		private void colorBlue()
 		{
-			this.setStyle("-fx-background-color: blue");
+			this.setStyle("-fx-background-color: blue;"
+					+ "-fx-text-fill: white;");
 		}
 		
 		
 		private void colorGreen()
 		{
-			this.setStyle("-fx-background-color: green");
+			this.setStyle("-fx-background-color: green;" + "-fx-text-fill: white;");
 		}
 	}
 }

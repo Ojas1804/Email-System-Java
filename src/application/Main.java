@@ -7,6 +7,8 @@ import application.controller.persistence.PersistenceAccess;
 import application.controller.persistence.ValidAccount;
 import application.model.EmailAccount;
 import application.model.services.LoginService;
+import application.view.FontSize;
+import application.view.Themes;
 import application.view.ViewFactory;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -21,12 +23,14 @@ public class Main extends Application
 	public void start(Stage stage) throws Exception
 	{	
 		ViewFactory viewFactory = new ViewFactory(emailManager);
-		viewFactory.updateScene();
 		List<ValidAccount> validAccounts = persistenceAccess.loadFromPersistence();
 		
 		if(validAccounts.size() > 0)
 		{
 			viewFactory.showMainWindow();
+			viewFactory.setTheme(Themes.GITHUBLIGHT);
+			viewFactory.setFontSize(FontSize.MEDIUM);
+			viewFactory.updateScene();
 			for(ValidAccount validAccount : validAccounts)
 			{
 				EmailAccount emailAccount = new EmailAccount(validAccount.getEmailId(), validAccount.getPassword());
@@ -37,6 +41,9 @@ public class Main extends Application
 		else
 		{
 			viewFactory.showLoginWindow();
+			viewFactory.setTheme(Themes.GITHUBLIGHT);
+			viewFactory.setFontSize(FontSize.MEDIUM);
+			viewFactory.updateScene();
 		}
 	}
 	

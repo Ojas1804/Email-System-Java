@@ -24,6 +24,7 @@ public class EmailMessage
 
 
 	private boolean hasAttachment = false;
+	private boolean attachmentLoaded = false;
 	
 	
 	
@@ -100,6 +101,7 @@ public class EmailMessage
 	public void addAttachment(MimeBodyPart mimeBodyPart)
 	{
 		hasAttachment = true;
+		attachmentLoaded = true;
 		attachmentList.add(mimeBodyPart);
 	}
 
@@ -108,6 +110,12 @@ public class EmailMessage
 	public boolean isHasAttachment()
 	{
 		return hasAttachment;
+	}
+	
+	
+	public boolean isAttachmentLoaded()
+	{
+		return attachmentLoaded;
 	}
 	
 	

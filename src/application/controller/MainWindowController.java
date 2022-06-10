@@ -171,7 +171,7 @@ public class MainWindowController extends PrimaryController implements Initializ
 			{
 				emailManager.setSelectedEmail(email);
 				if(!email.isRead()) emailManager.setRead(); // update seen to true if unseen
-				
+//				viewFactory.showDetailedEmailWindow();
 				messageRenderService.setEmail(email);
 				messageRenderService.restart();
 			}

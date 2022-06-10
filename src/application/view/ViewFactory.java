@@ -1,7 +1,6 @@
 package application.view;
 
-import java.util.LinkedList;
-
+import java.util.ArrayList;
 import application.EmailManager;
 import application.controller.ComposeMailController;
 import application.controller.DetailedEmailWindowController;
@@ -17,11 +16,8 @@ import javafx.stage.Stage;
 public class ViewFactory
 {
 	private EmailManager emailManager;
-	private LinkedList<Stage> activeStageList;
+	private ArrayList<Stage> activeStageList;
 	private boolean mainViewInitialized = false;
-	
-	private Themes theme = Themes.GITHUBLIGHT;
-	private FontSize fontSize = FontSize.MEDIUM;
 
 	
 	
@@ -29,8 +25,12 @@ public class ViewFactory
 	{
 		super();
 		this.setEmailManager(emailManager);
-		this.activeStageList = new LinkedList<>();
+		this.activeStageList = new ArrayList<Stage>();
+//		updateScene();
 	}
+	
+	private Themes theme = Themes.GITHUBLIGHT;
+	private FontSize fontSize = FontSize.MEDIUM;
 	
 	
 	
@@ -73,6 +73,7 @@ public class ViewFactory
 		
 		Scene scene = new Scene(parent);
 		Stage stage = new Stage();
+//		updateScene();
 		stage.setScene(scene);
 		stage.show();
 		activeStageList.add(stage);
@@ -90,8 +91,10 @@ public class ViewFactory
 	// show main window
 	public void showMainWindow()
 	{
+		this.theme = getTheme();
+		this.fontSize = getFontSize();
 		updateScene();
-		PrimaryController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
+		PrimaryController controller = new MainWindowController(emailManager, this, "MainWindow1.fxml");
 		initializeStage(controller);
 		this.mainViewInitialized = true;
 	}
@@ -130,8 +133,6 @@ public class ViewFactory
 
 
 	//--------------------------------------------OPTION HANDLING---------------------------------------------//
-//	private Themes theme = Themes.DARK;
-//	private FontSize fontSize = FontSize.MEDIUM;
 	
 	
 	public Themes getTheme()
@@ -162,13 +163,14 @@ public class ViewFactory
 	// ------------------------------UPDATE SCENE------------------------------------------------ //
 	public void updateScene()   // update scene style when updated in options window
 	{
+		System.out.println("Update scene called..");
 		for(Stage stage : activeStageList)
 		{
 			Scene scene = stage.getScene();
 			// Update CSS for this scene
 			scene.getStylesheets().clear();   // remove the default or alraedy existing imported stylesheets
-			scene.getStylesheets().add(getClass().getResource(Themes.getPath(theme)).toExternalForm());
-			scene.getStylesheets().add(getClass().getResource(FontSize.getPath(fontSize)).toExternalForm());
+			scene.getStylesheets().add(getClass().getResource(Themes.getCssPath(theme)).toExternalForm());
+			scene.getStylesheets().add(getClass().getResource(FontSize.getCssPath(fontSize)).toExternalForm());
 		}
 	}
 }

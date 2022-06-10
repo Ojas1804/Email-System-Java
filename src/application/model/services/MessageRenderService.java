@@ -77,7 +77,7 @@ public class MessageRenderService extends Service
 		else if(isMultipartType(contentType))
 		{
 			Multipart multipart = (Multipart) message.getContent();
-			loadMultipart(multipart, stringBuffer);
+			if(!email.isAttachmentLoaded()) loadMultipart(multipart, stringBuffer);
 		}
 	}
 	

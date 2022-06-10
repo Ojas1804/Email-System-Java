@@ -8,7 +8,7 @@ public enum FontSize
 	
 	
 	// return path to the corresponding css file
-	public static String getPath(FontSize fs)
+	public static String getCssPath(FontSize fs)
 	{
 		switch(fs)
 		{

@@ -1,8 +1,9 @@
 @font-face {
    font-family: 'Bell MT';
+   src: url('fonts/BellMT.ttf')
 }
 
-*{
+.root{
    -fx-font-family: "Bell MT";
    font-family: 'Bell MT';
    -fx-background-color: white;
