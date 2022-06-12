@@ -1,7 +1,7 @@
 # Email-System-Java: PERSONAL PROJECT
 An E-mail app in which you can connect gmail/gmx/outlook mail and use it for reading and sending emails.
 
-##Dependencies
+## Dependencies
 
 Uses Maven for downloading dependencies.
 The app uses JavaMail API, activation jar, and JavaFX dependencies.
@@ -18,3 +18,4 @@ The app uses JavaMail API, activation jar, and JavaFX dependencies.
 - Better design
 - Oauth for more secure login.
 - Remove warnings.
+- Add forward and reply features
